@@ -42,10 +42,6 @@ class _HomeState extends State<Home> {
             buildbody(),
           ],
         ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {},
-        ),
       ),
     );
   }
