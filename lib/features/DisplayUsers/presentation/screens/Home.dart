@@ -4,7 +4,6 @@ import 'package:fluttertest/features/DisplayUsers/presentation/bloc/User_CubitSt
 import 'package:fluttertest/features/DisplayUsers/presentation/bloc/Users_Cubit.dart';
 import 'package:fluttertest/features/DisplayUsers/presentation/controllers/controllers.dart';
 
-
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -13,7 +12,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-   
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -24,7 +22,7 @@ class _HomeState extends State<Home> {
               padding: const EdgeInsets.only(right: 10, left: 10),
               child: Center(
                 child: ConstrainedBox(
-                  constraints: BoxConstraints(maxWidth:400),
+                  constraints: BoxConstraints(maxWidth: 400),
                   child: TextField(
                     onChanged: (value) {
                       context.read<UsersCubit>().searchUsers(value);
@@ -43,6 +41,10 @@ class _HomeState extends State<Home> {
             ),
             buildbody(),
           ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {},
         ),
       ),
     );
